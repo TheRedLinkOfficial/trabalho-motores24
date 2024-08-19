@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 772581980}
   - component: {fileID: 772581979}
   - component: {fileID: 772581983}
+  - component: {fileID: 772581984}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -341,7 +342,7 @@ Transform:
   m_GameObject: {fileID: 772581978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.4, y: 8.94, z: 0}
+  m_LocalPosition: {x: 8.9, y: 9.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -374,6 +375,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &772581984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772581978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f3119744e717442b7dabaea2802a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 10
 --- !u!1 &1402062949
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +515,7 @@ Transform:
   m_GameObject: {fileID: 1402062949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.077775, y: 3.01, z: -1.6383264}
+  m_LocalPosition: {x: -2.077775, y: 3.01, z: 0}
   m_LocalScale: {x: 0.51714, y: 4.065273, z: 2.7474}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -743,7 +757,7 @@ Transform:
   m_GameObject: {fileID: 1502169468}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.2811719, w: 0.95965743}
-  m_LocalPosition: {x: 0, y: 0, z: 2.01}
+  m_LocalPosition: {x: 0, y: 0, z: -0.18}
   m_LocalScale: {x: 34.23, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
