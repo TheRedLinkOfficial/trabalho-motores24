@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Vector3 = UnityEngine.Vector3;
 public class player : MonoBehaviour
 {
@@ -20,5 +21,8 @@ public class player : MonoBehaviour
      float v = Input.GetAxis("Vertical");
      Vector3 direcao = new Vector3(h,0,v);
      rb.AddForce(direcao * velocidade * Time.deltaTime, ForceMode.Impulse);
+     if(transform.position.y < -10){ SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
+
+    
     }
 }
