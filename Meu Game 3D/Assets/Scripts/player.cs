@@ -7,6 +7,8 @@ using Vector3 = UnityEngine.Vector3;
 public class player : MonoBehaviour
 {
     public int velocidade = 10;
+    public int Forcapulo = 10;
+    public bool noChao = false;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +16,18 @@ public class player : MonoBehaviour
         TryGetComponent(out rb);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Chão" ){ 
+            noChao = true;}
+
+        
+    }
+   
+    
+    
+    
+    
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +37,14 @@ public class player : MonoBehaviour
      rb.AddForce(direcao * velocidade * Time.deltaTime, ForceMode.Impulse);
      if(transform.position.y < -10){ SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
 
-    
+
+     if (Input.GetKeyDown(KeyCode.Space) && noChao)
+     {
+         rb.AddForce(Vector3.up * Forcapulo,ForceMode.Impulse);
+         noChao = false;
+     }
+        
+     
+
     }
 }
