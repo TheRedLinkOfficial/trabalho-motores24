@@ -11,8 +11,9 @@ public class Coin : MonoBehaviour
 
    private void OnTriggerEnter(Collider other)
    {
-       if(other.gameObject.tag == "Player"){}
-       Destroy(gameObject);
+       if(other.gameObject.tag == "Player"){FindObjectOfType<GameManager>().subtrairCoins(1);
+           Destroy(gameObject);}
+       
    }
 
    void Update()
