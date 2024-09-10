@@ -7,11 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public int monedas;
     public TMP_Text hud, vitoria;
-    
+    public AudioClip ClipMoeda, ClipVitoria;
+
+    private AudioSource source;
     void Start()
     {
     monedas = FindObjectsOfType<Coin>().Length;
-    
+    TryGetComponent(out source);
+
     }
     public void atualizarHUD()
     {
@@ -22,10 +25,13 @@ public class GameManager : MonoBehaviour
     {
         monedas -= valor;
         atualizarHUD();
+        source.PlayOneShot(ClipMoeda);
 
         if (monedas <= 0)
         {
             vitoria.text = "Saba mt slk";
+            source.PlayOneShot(ClipVitoria);
+            source.Stop();
         }
         
     }
